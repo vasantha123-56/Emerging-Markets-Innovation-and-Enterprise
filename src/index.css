@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F5F7FA;
+    --bg-tertiary: #EBF0F7;
+    --bg-card: #FFFFFF;
+    --accent-blue: #1A56DB;
+    --accent-blue-light: #E8EEFB;
+    --accent-teal: #0891B2;
+    --accent-gold: #D97706;
+    --accent-gold-light: #FEF3C7;
+    --accent-green: #059669;
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 38 92% 50%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 221 83% 53%;
+    --radius: 0.75rem;
+
+    --sidebar-background: 220 14% 96%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 221 83% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 221 83% 53%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+  ::selection {
+    background: rgba(26,86,219,0.2);
+    color: #111827;
+  }
+}
+
+@layer utilities {
+  .light-card {
+    background: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  }
+  .light-card-hover {
+    transition: all 0.3s ease;
+  }
+  .light-card-hover:hover {
+    border-color: #D1D5DB;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08), 0 4px 10px rgba(0,0,0,0.04);
+    transform: translateY(-4px);
+  }
+  .light-card-blue {
+    background: #FFFFFF;
+    border: 1px solid rgba(26,86,219,0.15);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .gradient-section {
+    background: var(--bg-primary);
+  }
+  .gradient-section-alt {
+    background: var(--bg-secondary);
+  }
+  .gradient-section-blue {
+    background: linear-gradient(135deg, #EBF0F7 0%, #F5F7FA 100%);
+  }
+
+  .text-gradient-blue {
+    background: linear-gradient(135deg, #1A56DB, #0891B2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-gold {
+    background: linear-gradient(135deg, #D97706, #B45309);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .text-gradient-gold-shimmer {
+    background: linear-gradient(90deg, #D97706, #F59E0B, #D97706, #B45309, #D97706);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: goldShimmer 4s ease-in-out infinite;
+  }
+
+  .section-padding {
+    @apply py-12 md:py-16 px-4 md:px-8;
+  }
+}
+
+/* ====== KEYFRAME ANIMATIONS ====== */
+@keyframes goldShimmer {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes floatMedium {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-15px) translateX(10px); }
+  66% { transform: translateY(10px) translateX(-10px); }
+}
+@keyframes pulseRed {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes bounceArrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+@keyframes borderShimmer {
+  0% { border-color: rgba(217,119,6,0.2); }
+  50% { border-color: rgba(217,119,6,0.5); }
+  100% { border-color: rgba(217,119,6,0.2); }
+}
+@keyframes drawCheck {
+  0% { stroke-dashoffset: 100; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(26,86,219,0.3); }
+  50% { box-shadow: 0 0 0 12px rgba(26,86,219,0); }
+}
+
+.animate-float-slow { animation: floatSlow 6s ease-in-out infinite; }
+.animate-float-medium { animation: floatMedium 8s ease-in-out infinite; }
+.animate-pulse-red { animation: pulseRed 1.5s ease-in-out infinite; }
+.animate-marquee { animation: marqueeScroll 30s linear infinite; }
+.animate-bounce-arrow { animation: bounceArrow 2s ease-in-out infinite; }
+.animate-border-shimmer { animation: borderShimmer 3s ease-in-out infinite; }
+.animate-cta-pulse { animation: ctaPulse 2s ease-in-out infinite; }
+
+@keyframes bounceGentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-gentle { animation: bounceGentle 2.5s ease-in-out infinite; }
+
+/* Diamond Divider */
+.diamond-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 16px 0;
+}
+.diamond-divider::before,
+.diamond-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D1D5DB, transparent);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #F5F7FA; }
+::-webkit-scrollbar-thumb { background: #CBD5E1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94A3B8; }
+
+/* Focus */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #1A56DB !important;
+  box-shadow: 0 0 0 3px rgba(26,86,219,0.1) !important;
+}
+
+html { scroll-behavior: smooth; }
