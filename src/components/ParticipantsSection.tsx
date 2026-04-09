@@ -5,7 +5,7 @@ import { GraduationCap, Landmark, Briefcase, Wallet, Cpu } from "lucide-react";
 const participants = [
   {
     icon: GraduationCap,
-    title: "Researchers & Academics",
+    title: "Emerging Markets Researchers & Academics",
     headline: "Publish the Future of Enterprise",
     desc: "Share rigorous research on emerging markets, innovation strategy, enterprise performance, and policy for inclusive growth.",
     color: "#1A56DB",
@@ -16,7 +16,7 @@ const participants = [
   },
   {
     icon: Wallet,
-    title: "Fintech Founders & Product Teams",
+    title: "Innovation Leaders & Product Teams",
     headline: "Build the Next Market Wave",
     desc: "Highlight innovation in payments, enterprise platforms, digital commerce, and inclusive market access for startups and scaleups.",
     color: "#0891B2",
@@ -27,7 +27,7 @@ const participants = [
   },
   {
     icon: Cpu,
-    title: "Blockchain Developers & Innovators",
+    title: "Enterprise Technology & Innovation Experts",
     headline: "Engineer Resilient Systems",
     desc: "Discuss secure digital infrastructure, tokenization, interoperability, and trust layers for modern enterprise ecosystems.",
     color: "#059669",
@@ -38,7 +38,7 @@ const participants = [
   },
   {
     icon: Landmark,
-    title: "Policy Makers & Regulators",
+    title: "Policy Makers & Market Regulators",
     headline: "Shape Responsible Markets",
     desc: "Collaborate on governance, regulation, compliance, and inclusive policy frameworks that support emerging markets and enterprise growth.",
     color: "#7C3AED",
@@ -49,7 +49,7 @@ const participants = [
   },
   {
     icon: Briefcase,
-    title: "Students & Early Careers",
+    title: "Students & Future Enterprise Leaders",
     headline: "Launch a Future-Ready Career",
     desc: "Access mentorship, networking, and practical insights into emerging markets, innovation leadership, and enterprise strategy.",
     color: "#D97706",
